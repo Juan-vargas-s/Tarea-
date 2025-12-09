@@ -1,7 +1,7 @@
 """
-Ejercicio de archivos (nivel Prog 2):
+
 1) Pedir N y leer N asignaturas (codigo, descripcion, creditos) desde teclado.
-   Guardarlas en un archivo secuencial de texto.
+Guardarlas en un archivo secuencial de texto.
 2) Leer P y cargar P asignaturas desde el archivo de texto a un vector de registros.
 3) Ordenar el vector ascendentemente por creditos.
 4) Guardar el vector ordenado en un archivo binario.
@@ -21,15 +21,16 @@ def leer_asignaturas(cantidad):
 	return asignaturas
 
 
+
 def guardar_secuencial(nombre_archivo, asignaturas):
-	with open(nombre_archivo, "w", encoding="utf-8") as f:
+	with open(nombre_archivo, "w") as f:
 		for codigo, descripcion, creditos in asignaturas:
 			f.write(f"{codigo}|{descripcion}|{creditos}\n")
 
 
 def leer_secuencial(nombre_archivo, cantidad):
 	leidas = []
-	with open(nombre_archivo, "r", encoding="utf-8") as f:
+	with open(nombre_archivo, "r") as f:
 		for _ in range(cantidad):
 			linea = f.readline()
 			if not linea:
