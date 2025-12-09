@@ -1,2 +1,2 @@
 # Tarea-
-Ejercicios resueltos tarea progra 2
+Practica realizada a partir de los ejercicios de programación 2
