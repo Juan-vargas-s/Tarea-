@@ -77,6 +77,7 @@ def Print(score,names,idCard):
 
     sectionPromedie = Promedie(score)
     bestStudent,bestScore = BestStudent(score,names)
+    studentsScoreBelowThePromedie, studentsBelowThePromedie = BelowPromedie(score,names)
 
     print("\nListado de estudiantes ordenado por nota (descendente):")
     for i in range(len(score)):
@@ -84,6 +85,10 @@ def Print(score,names,idCard):
 
     print(f"\nPromedio de la sección: {sectionPromedie}")
     print(f"Mejor estudiante: {bestStudent} con nota {bestScore}")
+    print("\nEstudiantes con nota por debajo del promedio:")
+    for i in range(len(studentsBelowThePromedie)):
+        print(f"{studentsBelowThePromedie[i]} - Nota {studentsScoreBelowThePromedie[i]}")
+
     return
 
 def OrdenarNotasDesc(score, names, id_cards):
@@ -113,4 +118,17 @@ def OrdenarNotasDesc(score, names, id_cards):
 
     return
 
-main()
+def Demo():
+    # datos de prueba para validar salida
+    score = [19.5, 12.0, 17.8, 20.0]
+    studentName = ["Ana Pérez", "Luis Torres", "Mía Gómez", "José Lara"]
+    idCard = ["V-101", "V-102", "V-103", "V-104"]
+    Print(score, studentName, idCard)
+
+
+if __name__ == "__main__":
+    usar_demo = input("¿Usar datos de prueba? (s/n): ").strip().lower().startswith("s")
+    if usar_demo:
+        Demo()
+    else:
+        main()
