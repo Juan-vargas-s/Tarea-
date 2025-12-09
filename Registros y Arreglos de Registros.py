@@ -1,3 +1,12 @@
+""" a)	Para los alumnos de una sección de informática se cuenta con los siguientes datos:
+        Cedula, apellidos, nombres y nota definitiva. Determinar y escribir:
+
+•	Los datos de los alumnos ordenados descendientemente según la nota definitiva
+•	El promedio de notas de la sección 
+•	Cantidad de alumnos con nota definitiva por debajo del promedio de notas de la sección
+•	Apellidos y nombres del alumno con mayor nota
+"""
+
 def main():
     score = []
     studentName = []
@@ -86,6 +95,7 @@ def Print(score,names,idCard):
     print(f"\nPromedio de la sección: {sectionPromedie}")
     print(f"Mejor estudiante: {bestStudent} con nota {bestScore}")
     print("\nEstudiantes con nota por debajo del promedio:")
+    
     for i in range(len(studentsBelowThePromedie)):
         print(f"{studentsBelowThePromedie[i]} - Nota {studentsScoreBelowThePromedie[i]}")
 
