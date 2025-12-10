@@ -1,5 +1,5 @@
 """
-Ejercicio b) Archivos (nivel Prog 2)
+Ejercicio b) Archivos 
 1) Leer N carreras (codigo, descripcion, total alumnos) y guardarlas en un archivo binario.
 2) Leer ese binario a un vector de registros.
 3) Mostrar el vector y el total de alumnos de la institución.
